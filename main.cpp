@@ -175,15 +175,14 @@ int main() {
                     exit(2);
                 }
             case 4: {
+                int year, k = 0;
+                Book books[1000]; 
                 file = fopen("zapisi.dat", "rb");
 
                 if (!file) {
                     cout << "Error opening file" << endl;
                     return 1;
                 }
-                int year;
-                Book books[1000];
-                int k = 0;
                 cout << "Input a year: ";
                 cin >> year;
                 while (fread(&book, sizeof(Book), 1, file) == 1) {
