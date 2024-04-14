@@ -127,7 +127,7 @@ int main() {
                 }
 
                 fclose(file);
-                cout << "Press any button to continue...\n";
+                cout << "Press any key to continue...\n";
                 getch();
                 break;
             case 3:
@@ -203,7 +203,7 @@ int main() {
                          << ", Year: " << books[j].year
                          << ", Publisher: " << books[j].publisher
                          << ", Pages: " << books[j].num_pages << endl;
-                cout << "Press any button to continue...\n";
+                cout << "Press any key to continue...\n";
                 getch();
                 fclose(file);
                 break;
