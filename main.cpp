@@ -78,7 +78,7 @@ void quickSort(Book a[], int l, int r) {
 int main() {
     int c;
     FILE* file;
-
+    Book book;
     while (true) {
 #ifdef _WIN32
         system("CLS");
@@ -113,7 +113,6 @@ int main() {
                     cout << "File is empty.\n";
                 } else {
                     fseek(file, 0, SEEK_SET);
-                    Book book;
                     int i = 0;
                     while (fread(&book, sizeof(Book), 1, file) == 1) {
                         i++;
@@ -138,7 +137,6 @@ int main() {
                     return 1;
                 }
                 try {
-                    Book book;
                     cout << "Input book information\n";
                     cout << "Number: ";
                     if (!(std::cin >> book.number)) {
@@ -183,12 +181,11 @@ int main() {
                     cout << "Error opening file" << endl;
                     return 1;
                 }
-                cout << "Input a year: ";
                 int year;
-                cin >> year;
-                Book books[100];
-                Book book;
+                Book books[1000];
                 int k = 0;
+                cout << "Input a year: ";
+                cin >> year;
                 while (fread(&book, sizeof(Book), 1, file) == 1) {
                     if (book.year > year) {
                         books[k] = book;
