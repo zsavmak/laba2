@@ -1,0 +1,17 @@
+[
+  {
+    "key": "ctrl+alt+f",
+    "command": "workbench.action.tasks.build",
+    "args":"cppbuild"
+  },
+  {
+    "key": "ctrl+alt+r",
+    "command": "workbench.action.tasks.runTask",
+    "args": "Run Executable"
+  },
+  {
+    "key": "ctrl+shift+b",
+    "command": "workbench.action.tasks.runTask",
+    "args": "Build and Run"
+  }
+]
